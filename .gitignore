@@ -1,1 +1,3 @@
 .env
+study-frontend/node_modules/
+study-frontend/.env.local
