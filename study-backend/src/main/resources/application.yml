@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: local
+    default: local
   jpa:
     hibernate:
       ddl-auto: update
@@ -10,9 +10,9 @@ spring:
         format_sql: true
 
 server:
-  port: 8080
+  port: ${PORT:8080}
 
 jwt:
   secret: ${JWT_SECRET:local-dev-secret-key-must-be-at-least-32-chars}
-  access-expiration: 900000      # 15분 (ms)
-  refresh-expiration: 604800000  # 7일 (ms)
+  access-expiration: 900000
+  refresh-expiration: 604800000
