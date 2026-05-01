@@ -9,10 +9,13 @@ spring:
 
 oauth:
   kakao:
-    client-id: ${KAKAO_CLIENT_ID:}
-    client-secret: ${KAKAO_CLIENT_SECRET:}
+    client-id: ${KAKAO_CLIENT_ID:f34949a5f6fd7988369bda46068d0f91}
+    client-secret: ${KAKAO_CLIENT_SECRET:Kh6hZqCA0wuSmBPIdvvLv4cQhK25n7Yx}
     redirect-uri: ${KAKAO_REDIRECT_URI:http://localhost:8080/api/auth/kakao/callback}
   google:
     client-id: ${GOOGLE_CLIENT_ID:}
     client-secret: ${GOOGLE_CLIENT_SECRET:}
-    redirect-uri: ${GOOGLE_REDIRECT_URI:studyapp://auth/google}
+    redirect-uri: ${GOOGLE_REDIRECT_URI:http://localhost:8080/api/auth/google/callback}
+
+app:
+  frontend-redirect-uri: ${FRONTEND_REDIRECT_URI:studyapp://auth/callback}

@@ -119,7 +119,9 @@ user_equip (
 | 메서드 | 경로 | 설명 |
 |--------|------|------|
 | POST | /api/auth/kakao | 카카오 로그인 → JWT 발급 |
+| GET | /api/auth/kakao/callback | 카카오 OAuth 콜백 → JWT 발급 후 앱 딥링크로 리다이렉트 |
 | POST | /api/auth/google | 구글 로그인 → JWT 발급 |
+| GET | /api/auth/google/callback | 구글 OAuth 콜백 → JWT 발급 후 앱 딥링크로 리다이렉트 |
 | POST | /api/auth/refresh | 액세스 토큰 재발급 |
 | DELETE | /api/auth/logout | 로그아웃 |
 | GET | /api/users/me | 내 정보 조회 |
@@ -195,13 +197,14 @@ user_equip (
 
 **프론트**
 - [x] 로그인 화면 UI
-- [ ] expo-auth-session 카카오 연동
-- [ ] expo-auth-session 구글 연동
+- [x] expo-auth-session 카카오 연동 (WebBrowser.openAuthSessionAsync + 백엔드 콜백)
+- [x] expo-auth-session 구글 연동 (코드 완성, Google credentials 발급 후 테스트 필요)
 - [x] AccessToken 저장 (SecureStore)
 - [x] API 클라이언트 (axios + 인터셉터)
 - [x] 인증 상태에 따른 라우팅 처리
 
 검증: 카카오 로그인 → JWT 발급 → `/api/users/me` 200 OK
+> 미완료: Expo 서버 실행 후 카카오 실기기 테스트 필요. 구글은 Google Cloud Console credentials 발급 후 application-local.yml에 client_id/secret 추가 필요.
 
 ---
 
