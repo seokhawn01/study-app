@@ -36,7 +36,7 @@ KAKAO_CLIENT_SECRET=여기에_카카오_클라이언트_SECRET
 KAKAO_REDIRECT_URI=https://백엔드_도메인.up.railway.app/api/auth/kakao/callback
 GOOGLE_CLIENT_ID=여기에_구글_클라이언트_ID
 GOOGLE_CLIENT_SECRET=여기에_구글_클라이언트_SECRET
-GOOGLE_REDIRECT_URI=studyapp://auth/google
+GOOGLE_REDIRECT_URI=https://your-backend-domain.up.railway.app/api/auth/google/callback
 ```
 
 선택:
